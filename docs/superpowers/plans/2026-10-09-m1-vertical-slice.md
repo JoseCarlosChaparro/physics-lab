@@ -710,6 +710,17 @@ git add .github .claude tools/hooks
 git commit -m "ci: add verification workflow and claude stop hook"
 ```
 
+- [ ] **Step 12: Open the PR and make CI a required check (D46)**
+
+```bash
+git push -u origin feature/m1-vertical-slice
+gh pr create --draft --title "feat: m1 catapult vertical slice" --body "Implements docs/superpowers/plans/2026-10-09-m1-vertical-slice.md"
+# after the first CI run has reported the `verify` check:
+gh api -X PATCH repos/JoseCarlosChaparro/physics-lab/branches/main/protection/required_status_checks \
+  -f strict=true -f 'contexts[]=verify'
+```
+Expected: the draft PR shows the `verify` check; `main` now refuses merges while it fails.
+
 ---
 ### Task 2: `det-math` — seeded PRNG, deterministic trig/log, hashing
 
@@ -10727,7 +10738,7 @@ git commit -m "test(web): add milestone e2e flows, cross-browser determinism and
 
 - [ ] **Step 7: Whole-branch review and finish**
 
-Dispatch in parallel (Opus): `code-reviewer` (whole diff vs this plan), `physics-reviewer` (sim-core, instruments, challenges, validation numbers), `a11y-reviewer` (apps/web). Fix findings through the normal task loop, then use superpowers:finishing-a-development-branch. Report to the owner: which e2e specs ran and on which browsers, the Chromebook number (or that it is pending on the device), and the open manual checklist rows.
+Dispatch in parallel (Opus): `code-reviewer` (whole diff vs this plan), `physics-reviewer` (sim-core, instruments, challenges, validation numbers), `a11y-reviewer` (apps/web). Fix findings through the normal task loop, then use superpowers:finishing-a-development-branch: mark the PR ready and merge it once `verify` passes (D46). Report to the owner: which e2e specs ran and on which browsers, the Chromebook number (or that it is pending on the device), and the open manual checklist rows.
 
 ---
 
