@@ -11,7 +11,7 @@ Sellable product for universities/schools and a portfolio piece.
 ## Project rules
 - **Decisions log first.** Every new decision or deferred topic is appended to the log (next free `Dn`/`Fn`, date, rationale). Never drop a deferred topic; scope changes only through the log.
 - **Physics rigor.** Every quantity shown to users comes from the simulation and is validated against an analytic solution within the tolerances of spec §8. Changing a tolerance requires a log entry.
-- **Portability boundary.** `packages/sim-core`, `instruments`, `console`, `challenges`, `formats` must not import DOM, rendering or browser-only APIs. Only `apps/web` may.
+- **Portability boundary.** `packages/det-math`, `sim-core`, `instruments`, `console`, `challenges`, `formats` must not import DOM, rendering or browser-only APIs. Only `apps/web` may.
 - **Determinism.** In core packages: no `Math.random`, `Date`, `Math.sin`/`Math.cos`; use the core's seeded PRNG and deterministic trig; iterate in stable entity-ID order; Rapier via `@dimforge/rapier3d-deterministic`.
 - **Every world change is a Command.** Mouse UI and console produce the same serializable core commands.
 - **Dependency injection.** Depend on interfaces (ports); concrete adapters (Rapier, renderer, storage, clock, PRNG) are wired only in the composition root of each app. No module-level singletons or hidden globals.
