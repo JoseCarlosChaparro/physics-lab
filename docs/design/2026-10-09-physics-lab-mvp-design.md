@@ -20,7 +20,7 @@ A Roblox/Minecraft-style game that works as a **digital physics laboratory**: a 
 ### 1.3 Success criteria for Phase 1
 - A teacher can assign one of the six challenges with randomized parameters, students complete it in a browser without an account, and the teacher can **verify each submitted result by deterministic replay**.
 - Every challenge solver agrees with the simulation within the tolerance in §8 across its full publishable parameter range (CI-enforced).
-- WCAG 2.1 AA conformance for the UI, with accessible alternatives for the 3D canvas (D14).
+- WCAG 2.2 AA conformance for the UI, with accessible alternatives for the 3D canvas (D14, D29).
 - ≥ 30 fps on a Celeron-class school Chromebook at the low quality tier; offline after first load (D18, D19).
 - Full Spanish and English content (D9).
 
@@ -252,8 +252,8 @@ Orbit camera and first-person walk mode (§5.7); hotbar with number-key shortcut
 ### 10.3 Instruments UI
 Force, velocity and acceleration vectors distinguished by **color and line/arrowhead shape**; ruler, stopwatch, protractor, strobe ghosts; live graphs, each with an accessible data table; measurements always shown as `value ± u` with units.
 
-### 10.4 Accessibility (D14)
-WCAG 2.1 AA: full keyboard operation with visible focus; a live **scene-state region** for screen readers announcing events (e.g. "ball hit the ground at x = 12.3 ± 0.1 m"); AA contrast; colorblind-safe palette; reduced-motion mode; scalable text. VPAT/ACR and HECVAT answers are produced before US sales.
+### 10.4 Accessibility (D14, D29)
+WCAG 2.2 AA, including 2.4.11 Focus Not Obscured, 2.5.7 Dragging Movements (every drag in building and camera control has a single-click or keyboard alternative), 2.5.8 Target Size (≥ 24×24 CSS px), 3.3.7 Redundant Entry and 3.2.6 Consistent Help: full keyboard operation with visible focus; a live **scene-state region** for screen readers announcing events (e.g. "ball hit the ground at x = 12.3 ± 0.1 m"); AA contrast; colorblind-safe palette; reduced-motion mode; scalable text. VPAT/ACR and HECVAT answers are produced before US sales.
 
 ### 10.5 Internationalization (D9)
 Spanish and English for all UI and content; locale-aware number formatting (decimal comma or point); SI units. CI fails when any key is missing in either language.
@@ -295,7 +295,7 @@ CI on every change: lint (including the core's banned-API rules), typecheck, uni
 | **M2 — Full builder** | All parts, joints and materials; walk mode (jump, crouch, sprint, flight); undo/redo; save/load worlds; full console. | Sandbox can build every catalog machine; determinism tests pass across browsers. |
 | **M3 — Content** | Challenges 2–6, tutorial, all solvers, complete validation suite. | Every §8 tolerance met across publishable ranges in CI. |
 | **M4 — Teacher flow** | Parameter ranges, seeded links/files, replay verification view, PDF/CSV reports. | Teacher can assign, collect and verify a full class set offline. |
-| **M5 — Pilot-ready** | WCAG 2.1 AA audit, complete es/en, offline PWA, quality tiers on Chromebook, teacher guides. | All success criteria in §1.3 met. |
+| **M5 — Pilot-ready** | WCAG 2.2 AA audit, complete es/en, offline PWA, quality tiers on Chromebook, teacher guides. | All success criteria in §1.3 met. |
 
 Art direction (F11) runs in parallel from M2 on the theme layer.
 
