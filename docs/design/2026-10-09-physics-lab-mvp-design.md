@@ -1,6 +1,6 @@
 # Physics Lab — Product Vision & Phase 1 (MVP) Design
 
-- **Status:** Draft for owner review
+- **Status:** Approved 2026-10-09 (D35)
 - **Date:** 2026-10-09
 - **Decision record:** [`decisions-log.md`](decisions-log.md) — every `Dn` / `Fn` reference below points there.
 
@@ -319,8 +319,8 @@ Art direction (F11) runs in parallel from M2 on the theme layer.
 
 ---
 
-## 14. Items for owner review
+## 14. Owner review (closed 2026-10-09)
 
-1. **Product name:** "Physics Lab" is a working title.
+1. **Product name:** "Physics Lab" stays as the working title (D33); final name deferred (F14).
 2. **Repository:** this dedicated monorepo (`physics-lab`, created 2026-10-09, D28) holds the design documents and all implementation.
-3. **World size and grid** (128 × 64 × 128 cells of 0.5 m) and **instrument noise values** (§6) are proposed defaults; confirm or adjust.
+3. **World size and grid** (128 × 64 × 128 cells of 0.5 m) and **instrument noise values** (§6) approved as proposed (D34).

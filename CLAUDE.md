@@ -34,4 +34,4 @@ Sellable product for universities/schools and a portfolio piece.
 
 ## Workflow
 - Spec-driven: one implementation plan per Phase 1 milestone (M1 → M5, spec §12), created with the writing-plans skill.
-- Current status: spec in owner review (open items in spec §14); next step is the M1 plan — catapult vertical slice in greybox.
+- Current status: spec approved (D35); M1 plan ready (`docs/superpowers/plans/2026-10-09-m1-vertical-slice.md`), not started; execute it subagent-driven from Task 1.
