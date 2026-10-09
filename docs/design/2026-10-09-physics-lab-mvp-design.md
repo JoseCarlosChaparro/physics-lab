@@ -22,6 +22,7 @@ A Roblox/Minecraft-style game that works as a **digital physics laboratory**: a 
 - Every challenge solver agrees with the simulation within the tolerance in §8 across its full publishable parameter range (CI-enforced).
 - WCAG 2.2 AA conformance for the UI, with accessible alternatives for the 3D canvas (D14, D29).
 - ≥ 30 fps on a Celeron-class school Chromebook at the low quality tier; offline after first load (D18, D19).
+- All 2D screens (Home, Teacher view, reports) work and look polished from 320 px to 2560 px wide (D32).
 - Full Spanish and English content (D9).
 
 ### 1.4 Non-goals for Phase 1
@@ -245,6 +246,9 @@ Mass ratios between jointed bodies are limited to 10:1 by default (D17); the tre
 - **Home:** sandbox, built-in challenges, open challenge/result (file or link), language, accessibility settings.
 - **World:** modes Build, Run, and Teacher view (configure a challenge, verify results).
 - **Side panel (contextual):** selected object properties, challenge loop (predict → observe → explain), notebook with calculator.
+
+### 10.1.1 Responsive layout (D32)
+Home, Teacher view, report and result-review screens are mobile-first and responsive from 320 px to 2560 px, portrait and landscape, with no horizontal scroll at 320 px (WCAG 1.4.10) and fluid layouts/type (`clamp()`, container queries). The 3D World targets desktop mouse + keyboard in Phase 1; on small or touch-only screens it shows a clear notice and still allows opening and reviewing challenges and results. Visual checks at 320, 768, 1280 and 2560 px are part of each milestone's exit criteria.
 
 ### 10.2 Controls
 Orbit camera and first-person walk mode (§5.7); hotbar with number-key shortcuts; join tool (part A → part B → joint type) with visible snapping; console; undo/redo (Ctrl+Z / Ctrl+Y). Everything is operable by keyboard alone.
